@@ -1,0 +1,509 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  color: white;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #2a2a2a;
+  width: 1200px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  gap: 100px;
+}
+
+.header .first-column {
+  margin-left: 100px;
+}
+
+.header .first-column .logo-img {
+  width: 130px;
+  height: 80px;
+}
+
+.header .second-column {
+  width: 800px;
+}
+.header .first-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header .first-line .search--container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header .first-line .header-search {
+  height: 20px;
+  width: 200px;
+  color: black;
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+.header .first-line .search--icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.header .first-line .search--icon:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease all;
+}
+
+.header .first-line .login a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.header .first-line .login .login-img {
+  width: 35px;
+  height: 35px;
+}
+
+.block {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background-color: white;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.login--modal {
+  color: black;
+  display: flex;
+  width: 300px;
+  height: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2a2a;
+  border: 1px solid black;
+  position: absolute;
+  top: 200px;
+  right: 35%;
+  border-radius: 10px;
+  opacity: 0.9;
+  transition: 1s ease all;
+  z-index: 2;
+}
+
+.login--modal h2 {
+  font-size: 40px;
+  color: black;
+  margin-bottom: 40px;
+}
+
+.login--modal input {
+  text-align: center;
+  color: black;
+  margin: 3px;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.login--modal button {
+  color: black;
+  border-radius: 10px;
+  border: none;
+}
+
+.showModal {
+  top: 200px;
+}
+
+.hideModal {
+  top: 100%;
+}
+
+.visible {
+  display: flex;
+}
+
+.invisible {
+  display: none;
+}
+
+.header .first-line .car-img {
+  height: 30px;
+  width: 35px;
+}
+
+.header .second-line {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.header .second-line a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 5px;
+}
+
+.header .second-line a img {
+  height: 15px;
+  width: 15x;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  margin-bottom: 200px;
+}
+
+.main-content .principal-product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  gap: 20px;
+}
+
+.main-content .principal-product:hover {
+  transform: scale(1.01);
+  transition: 0.5s ease;
+}
+
+.main-content .principal-product img {
+  width: 200px;
+  height: 200px;
+}
+
+.main-content .principal-product .product-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content .principal-product .product-description h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.main-content .principal-product .product-description p {
+  max-width: 350px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.main-content .principal-product .product-description .price {
+  max-width: 350px;
+}
+
+.main-content .principal-product .product-description .price span {
+  font-size: 15px;
+  margin-left: 20px;
+  color: red;
+}
+
+.main-content .principal-product .product-description .price div {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content .principal-product .product-description .price div span {
+  font-size: 25px;
+  margin: 5px;
+  color: white;
+}
+
+.main-content .principal-product .product-description .price div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content .principal-product .product-description .price div .full-price {
+  color: green;
+}
+
+.main-content .principal-product .product-description .price div .parcel {
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.main-content .principal-product .product-description .price div button {
+  width: 110px;
+  height: 40px;
+  background-color: green;
+  border: none;
+  border-radius: 10px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.products-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+}
+
+.products-container .products {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+  margin-bottom: 70px;
+}
+
+.products-container .products .product {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.products-container .products .product:hover {
+  transform: scale(1.02);
+  transition: ease all 0.3s;
+}
+
+.products-container .products .product .product-img {
+  width: 200px;
+  height: 180px;
+}
+
+.products-container .products .product .price span {
+  font-size: 15px;
+  margin-left: 20px;
+  color: red;
+}
+
+.products-container .products .product .price div {
+  display: flex;
+  flex-direction: row;
+}
+
+.products-container .products .product .price div span {
+  font-size: 25px;
+  margin: 5px;
+  color: white;
+}
+
+.products-container .products .product .price .full-price {
+  color: green;
+}
+
+.products-container .products .product .price .parcel {
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.products-container .products .product .price button {
+  width: 110px;
+  height: 40px;
+  background-color: green;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-left: 60px;
+  cursor: pointer;
+}
+
+.page--select {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.page--select div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: gray;
+  border-radius: 30px;
+}
+
+.page--select img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.footer img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.footer img:hover {
+  transform: scale(1.1);
+  transition: all ease 0.3s;
+}
+.language {
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  .main-container {
+    width: 900px;
+  }
+  .header {
+    gap: 50px;
+  }
+
+  .first-column {
+    margin-left: 10px !important;
+  }
+
+  .login--modal {
+    right: 30%;
+  }
+}
+
+@media (max-width: 950px) {
+  .main-container {
+    width: 700px;
+  }
+
+  .header {
+    width: 550px;
+  }
+
+  .header .second-column {
+    width: 600px;
+  }
+
+  .first-line {
+    gap: 10px !important;
+  }
+
+  .second-line {
+    gap: 10px !important;
+  }
+
+  .main-content {
+    margin-top: 0;
+  }
+
+  .main-content .principal-product {
+    flex-direction: column;
+    width: 550px;
+  }
+
+  .products-container .products {
+    width: 650px;
+  }
+
+  .login--modal {
+    right: 30%;
+  }
+}
+
+@media (max-width: 750px) {
+  .main-container {
+    width: 550px;
+  }
+
+  .header {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .header .second-column {
+    transform: scale(0.75);
+  }
+
+  .main-content {
+    transform: scale(0.75);
+  }
+
+  .login--modal {
+    right: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    width: 350px;
+  }
+
+  .header {
+    width: 300px !important;
+  }
+
+  .second-column {
+    width: 300px !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first-line {
+    justify-content: center;
+    width: 300px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  .second-line {
+    justify-content: center;
+    width: 300px;
+    flex-wrap: wrap;
+  }
+
+  .login--modal {
+    right: 7%;
+  }
+}
